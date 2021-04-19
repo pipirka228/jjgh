@@ -361,6 +361,14 @@ async def eightball(ctx):
     )
 
     await ctx.send(embed = embed) # Ну тут всё ясно, отправка самого эмбеда
+    
+@client.command()
+async def обнять(ctx, member : discord.Member):
+    list = ["https://cdn.discordapp.com/attachments/644458478601240587/831501331160104991/image0.gif","https://cdn.discordapp.com/attachments/751790701251133562/831933961109766154/image0.gif","https://cdn.discordapp.com/attachments/751790701251133562/831933914247462942/image0.gif","https://cdn.discordapp.com/attachments/751790701251133562/831933860329685002/image0.gif","https://cdn.discordapp.com/attachments/751790701251133562/831933484012011560/image0.gif","https://cdn.discordapp.com/attachments/751790701251133562/831933098262396978/image0.gif","https://cdn.discordapp.com/attachments/751790701251133562/831931666514706453/image6.gif","https://cdn.discordapp.com/attachments/751790701251133562/831931664946692226/image2.gif"]
+    e = discord.Embed(colour=0xFEA0FD)
+    e.add_field(name = "**Обнимашки**", value = f"**{ctx.author.mention} обнял {member.mention}**")
+    e.set_image(url=f'{random.choice(list)}')
+    await ctx.send(embed=e)
 
 
     
